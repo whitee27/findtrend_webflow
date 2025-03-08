@@ -1,0 +1,36 @@
+:root {
+    --color-light: #FFFFFF;
+    --color-dark: #000000;
+    --color-dark-alt: #2B2B2B;
+    --color-gray: #8B8B8B;
+    --color-gray-alt: #ADADAD;
+    --color-accent: #A8FF35;
+    --color-accent-alt: #8CC83A;
+    
+
+    --border: 1px solid var(--color-dark);
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --border-radius-button: 40px;
+    --border-radius-button-alt: 29px;
+
+    --font-family-base: 'Effra', sans-serif;
+
+    --container-width: 1440px;
+    --container-padding-x: 18px;
+
+    --section-padding-y: 70px;
+
+    --button-height: 57px;
+
+    --transition-duration: 0.2s;
+    --transition-duration-long: 0.5s;
+
+    @include desktop {
+        --section-padding-y: 50px;
+    }
+
+    @include mobile {
+        --section-padding-y: 80px;
+    }
+}

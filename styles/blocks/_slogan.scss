@@ -1,0 +1,50 @@
+.slogan {
+    display: flex;
+    height: 584px;
+    background-color: var(--color-light);
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+        height: 300px;
+    }
+
+    @include mobile {
+        height: 628px;
+    }
+
+    &__text {
+        line-height: 1.1;
+        width: 1160px;
+        height: 304px;
+
+        &--grey {
+            color: var(--color-gray-alt);
+            background: none;
+            transition-duration: var(--transition-duration);
+            
+            @include hover {
+                color: var(--color-accent);
+                font-size: 72px;
+
+                @include mobile {
+                    font-size: 40px;
+                }
+            }
+
+            
+        }
+
+        @include desktop {
+            font-size: 36px;
+            width: 800px;
+            height: 200px;
+        }
+
+        @include mobile {
+            width: 335px;
+            height: 387px;
+
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(14px, 1.28vw, 18px);
+    font-weight: 700;
+    line-height: 1.4;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: var(--border-radius-button);
+    white-space: nowrap;
+    text-decoration: none;
+
+    @include hover {
+        transform: scale(110%);
+        background-color: var(--color-light);
+    }
+
+    &--white {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        padding: 12px 32px;
+        font-weight: 400;
+        line-height: 1;
+
+        @include tablet {
+            padding: 6px 16px;
+        }
+    }
+
+    &--accent {
+        padding: 16px 32px;
+    }
+}

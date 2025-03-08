@@ -1,0 +1,116 @@
+.tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 140px 293px;
+    row-gap: 60px;
+
+    @include desktop {
+        padding: 100px 150px;
+    }
+
+    @include tablet {
+        row-gap: 30px;
+    }
+
+    @include mobile {
+        padding: 80px 0;
+        row-gap: 80px;
+        margin: 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-wrap: nowrap;
+        transition-duration: var(--transition-duration-long);
+        
+        @include hover {
+            color: var(--color-light);
+            transform: scale(105%);
+        }
+
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+
+    &__image-block {
+        width: 500px;
+        height: 200px;
+        background-color: #f5f5f5;
+        border-radius: var(--border-radius);
+        position: relative;
+
+        @include tablet {
+            width: 400px;
+            height: 150px;
+        }
+
+        @include mobile {
+            width: 339px;
+            height: 118px;
+        }
+    }
+    
+    &__body {
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        left: 15%;
+        top: 30%;
+        width: 350px;
+        height: 80px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        transition-duration: var(--transition-duration-long);
+
+        @include hover {
+            filter: grayscale(100%);
+            transform: scale(110%);
+        }
+
+        @include tablet {
+            left: 6%;
+            top: 25%;
+        }
+
+        @include mobile {
+            width: 290px;
+            height: 70px;
+            left: 7%;
+            top: 22%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        width: 666px;
+        line-height: 1.5;
+        justify-content: center;
+        transition-duration: var(--transition-duration-long);
+
+        ::selection {
+            color: var(--color-accent-alt);
+            background-color: var(--color-dark);
+        }
+
+        @include hover {
+            transform: scale(105%);
+        }
+
+        @include mobile {
+            width: 286px;
+            font-size: 14px;
+            height: 63px;
+        }
+    }
+}

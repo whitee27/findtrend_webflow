@@ -1,0 +1,8 @@
+.background-header {
+    background: url(../../images/header-bg.jpg) center/cover no-repeat;
+    height: 100vh;
+
+    @include desktop {
+        height: 1000px;
+    }
+}

@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+    padding-inline: 80px;
+    background: url(../../images/header-bg.jpg) center/cover no-repeat;
+    height: 100px;
+    color: var(--color-light);
+    
+    @include tablet {
+        padding-inline: 30px;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        @include hover {
+            opacity: 0.7;
+        }
+    }
+
+    &__menu {
+        &-item {
+            display: flex;
+            column-gap: 40px;
+            text-wrap: nowrap;
+            
+            ::selection {
+                color: var(--color-accent);
+            }
+            
+            @include tablet {
+                column-gap: 20px;
+            }
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 7px;
+            height: var(--header-height);
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                transform: scale(110%);
+                color: var(--color-gray);
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+
+        @include tablet {
+            column-gap: 20px;
+        }
+
+        &__registration-button {
+            border: none;
+            text-decoration: none;
+        }
+    }
+}
