@@ -1,0 +1,53 @@
+.article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 640px;
+    width: 360px;
+    background-color: #fafafa;
+    border-radius: var(--border-radius);
+    padding-inline: 32px;
+
+    &--active {
+        background-color: var(--color-accent);
+    }
+
+    &__title {
+        padding-top: 32px;
+    }
+
+    &__main {
+        height: 64px;
+
+        &--marked {
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 1;
+            background-color: inherit;
+        }
+    }
+
+    &__list {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+
+    }
+    
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 8px;
+        line-height: 1;
+    }
+
+    &__button {
+        position: absolute;
+        width: 296px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 24px;
+    }
+}

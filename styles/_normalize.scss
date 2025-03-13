@@ -122,24 +122,7 @@
     */
    line-height: 1.5;
  }
- 
- /**
-   Приводим к единому цвету svg-элементы
-  */
- svg *[fill] { fill: currentColor }
- svg *[stroke] { stroke: currentColor }
- 
- /**
-   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
-  */
- svg * {
-   transition-property: fill, stroke;
- }
- 
- /**
-   Удаляем все анимации и переходы для людей,
-   которые предпочитают их не использовать
-  */
+
  @media (prefers-reduced-motion: reduce) {
    * {
      animation-duration: 0.01ms !important;

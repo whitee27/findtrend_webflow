@@ -27,7 +27,24 @@
         }
     }
 
-    &--accent {
+    &--accent,
+    &--black {
         padding: 16px 32px;
+    }
+
+    &--black {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+
+        @include hover {
+            transform: scale(110%);
+            background-color: var(--color-dark);
+        }
+    }
+
+    &--accent {
+        @include hover {
+            background-color: var(--color-accent);
+        }
     }
 }

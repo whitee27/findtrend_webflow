@@ -1,0 +1,45 @@
+.footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 80px;
+    
+    @include tablet {
+        height: 473px;
+        flex-direction: column;
+        padding-block: 80px;
+        row-gap: 80px;
+    }
+    
+    &__logo {
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            opacity: 0.6;
+        }
+
+        @include tablet {
+            justify-content: center;
+        }
+    }
+    &__list {
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+    }
+    
+    &__item {
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            transform: scale(110%);
+            color: #87d322;
+        }
+    }
+}

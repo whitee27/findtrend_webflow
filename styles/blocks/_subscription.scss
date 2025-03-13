@@ -1,0 +1,64 @@
+.subscription {
+    min-height: 1128px;
+    display: flex;
+    flex-direction: column;
+    padding: 140px;
+    align-items: center;
+    row-gap: 40px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-light);
+        row-gap: 40px;
+    }
+
+    &__title {
+        color: var(--color-light);
+        line-height: 1;
+        transition-duration: var(--transition-duration-long);
+        
+        @include hover {
+            color: var(--color-accent);
+            transform: scale(110%);
+        }
+    }
+
+    &__radio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 24px;
+    }
+
+    &__legend  {
+        font-size: 24px;
+        font-weight: 500;
+        color: #f5f5f5;
+        opacity: 0.5;
+        transition-duration: var(--transition-duration-long);
+        
+        @include hover {
+            color: #f5f5f5;
+            transform: scale(110%);
+            opacity: 1;
+        }
+        
+
+        &--active {
+            color: var(--color-light);
+            opacity: 1;
+            
+            @include hover {
+                color: var(--color-accent);
+                transform: scale(110%);
+                opacity: 1;
+
+            }
+        }
+    }
+
+    
+}

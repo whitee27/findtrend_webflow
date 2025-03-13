@@ -27,8 +27,9 @@
     }
 
     &--3 {
+        column-gap: 40px;
         @include desktop {
-            --gridColumns: 2;
+            --gridColumns: 1;
         }
 
         @include mobile {
@@ -39,6 +40,8 @@
     &--4 {
         @include tablet {
             --gridColumns: 2;
+            place-items: center;
+            padding-bottom: 80px;
         }
     }
 }

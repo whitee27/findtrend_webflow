@@ -1,22 +1,30 @@
 .startups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding-block: var(--container-padding-x);
-    margin-top: 140px;
-    height: clac(732px + margin-top);
-    width: 1160px;
     
+    // max-height: clac(732px + 140px);
+    max-width: 1160px;
+    max-height: 1100px;
+    padding-bottom: 80px;
+
     @include desktop {
         margin-top: 80px;
+       
     }
 
     &__header {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         transition-duration: var(--transition-duration-long);
 
         &:not(:last-child) {
-            margin-bottom: 80px;
+            padding-bottom: 80px;
 
             @include desktop {
-                margin-bottom: 40px;
+                padding-bottom: 40px;
             }
         }
 
@@ -30,6 +38,10 @@
     &__body {
         height: 576px;
         width: 1160px;
+
+        @include tablet {
+            width: 700px;
+        }
     }
 
     &__item {
