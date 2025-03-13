@@ -9,7 +9,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 100px;
+        padding-top: 100px;
     }
 
     &__title {
@@ -19,6 +19,10 @@
 
         &:nth-child(2) {
             margin-bottom: 24px;    
+
+            @include mobile {
+                margin-bottom: 16px; 
+            }
         }
 
         @include hover {
@@ -42,6 +46,10 @@
         @include hover {
             transform: scale(105%);
         }
+
+        @include mobile {
+            width: 286px;
+        }
     }
 
     &__get-started {
@@ -50,10 +58,16 @@
         column-gap: 18px;
         margin-top: 40px; 
         margin-left: 110px;
+
+        @include mobile {
+            margin-top: 32px; 
+            margin-left: 0;
+        }
     }
 
     &__body {
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: center;
         position: relative;
@@ -61,6 +75,8 @@
 
     &__images {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-wrap: nowrap;
     }
 
@@ -78,6 +94,21 @@
                 right: 0;
                 left: 30%;
             }
+
+            @include mobile {
+                right: 0;
+                left: 20%;
+            }
+
+            @media(max-width: 520px) {
+                right: 0;
+                left: 2%;
+            }
+
+            @include mobile-s {
+                right: 0;
+                left: 2%;
+            }
         }
 
         &:nth-child(2) {
@@ -91,6 +122,21 @@
                 right: 0;
                 left: 30%;
                 top: 90px;
+            }
+
+            @include mobile {
+                right: 0;
+                left: 20%;
+            }
+
+            @media(max-width: 520px) {
+                right: 0;
+                left: 2%;
+            }
+
+            @include mobile-s {
+                right: 0;
+                left: 2%;
             }
         }
 
@@ -106,6 +152,21 @@
                 left: 30%;
                 top: 163px;
             }
+
+            @include mobile {
+                right: 0;
+                left: 20%;
+            }
+
+            @media(max-width: 520px) {
+                right: 0;
+                left: 2%;
+            }
+
+            @include mobile-s {
+                right: 0;
+                left: 2%;
+            }
         }
 
         &:nth-child(4) {
@@ -119,6 +180,21 @@
                 right: 0;
                 left: 30%;
                 top: 245px;
+            }
+
+            @include mobile {
+                right: 0;
+                left: 20%;
+            }
+
+            @media(max-width: 520px) {
+                right: 0;
+                left: 2%;
+            }
+
+            @include mobile-s {
+                right: 0;
+                left: 2%;
             }
         }
 

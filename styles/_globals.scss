@@ -29,6 +29,10 @@ body {
   h3, .h3 {
     @include fluid-text(64, 36);
     font-weight: 700;
+
+    @include tablet {
+      font-weight: 900;
+    }
   }
 
   h4, .h4 {
